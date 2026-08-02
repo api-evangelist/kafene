@@ -1,7 +1,20 @@
 aid: kafene
 name: Kafene
-description: 'Kafene is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+image: https://cdn.prod.website-files.com/66c3383e064576f49e765ed2/6a0d813b7a26a50ddb512855_kafene-logo-horiz-color.svg
+description: >-
+  Kafene is a New York-based point-of-sale financing platform that lets retailers offer
+  transparent lease-to-own (LTO) purchase options to prime and non-prime consumers.
+  Founded in 2019 by Neal Desai and James Schuler, the company underwrites shoppers with
+  an AI-driven risk model that pulls 20,000+ data points to return an approval — up to
+  $5,000 — in seconds, then pays the merchant directly on delivery confirmation while the
+  customer pays weekly or biweekly until ownership. Merchants originate applications from
+  their in-store POS or by sending a text-to-apply link; consumers manage leases and
+  payments in a self-service dashboard. Kafene raised a ~$31M Series B and reaches
+  merchants through financing-waterfall networks such as Versatile Credit and LendPro.
+  As of the 2026-08-01 enrichment probe Kafene publishes no public developer program,
+  no OpenAPI/GraphQL/MCP contract, no SDKs, and no /.well-known discovery surface; its
+  merchant and consumer surfaces are authenticated single-page web applications and
+  integration is arranged through Kafene's partner team, not self-serve documentation.
 url: https://raw.githubusercontent.com/api-evangelist/kafene/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -10,8 +23,29 @@ x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-01'
 modified: '2026-08-01'
+accessModel:
+  pricing: unknown
+  onboarding: sales
+  trial: false
+  try_now: false
+  public: false
+  label: Partner-only
+  confidence: medium
+  source:
+  - https://www.kafene.com/become-a-kafene-partner
+  - https://www.kafene.com/faq
+  generated: '2026-08-01'
+  method: searched
 tags:
 - Company
+- Financial Services
+- Fintech
+- Lease To Own
+- Point Of Sale
+- Consumer Finance
+- Retail
+- Underwriting
+- Payments
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +54,39 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://forgeglobal.com/kafene_stock/
+  url: https://www.kafene.com
+- type: About
+  url: https://www.kafene.com/about-kafene
+- type: Support
+  url: https://www.kafene.com/contact
+- type: FAQ
+  url: https://www.kafene.com/faq
+- type: Blog
+  url: https://www.kafene.com/newsroom
+- type: Newsroom
+  url: https://www.kafene.com/newsroom
+- type: Careers
+  url: https://www.kafene.com/careers
+- type: SignUp
+  url: https://www.kafene.com/become-a-kafene-partner
+- type: Login
+  url: https://merchant.kafene.com/login
+- type: TermsOfService
+  url: https://www.kafene.com/legal/terms-conditions
+- type: PrivacyPolicy
+  url: https://www.kafene.com/legal/privacy-policy
+- type: LLMsTxt
+  url: llms/kafene-llms.txt
+- type: DomainSecurity
+  url: security/kafene-domain-security.yml
+x-enrichment:
+  date: '2026-08-01'
+  status: enriched
+  artifacts_added: 3
+  pass: local-v1
+  note: >-
+    Full contract discovery ran against every kafene.com host (www, merchant,
+    application, app, customer, api) plus package registries and GitHub. No OpenAPI,
+    GraphQL, AsyncAPI, MCP server, agent card, SDK or /.well-known document exists.
+    Recorded as verified negative data; identity + link-property pass completed from
+    the provider's own site.

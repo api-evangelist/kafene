@@ -1,0 +1,107 @@
+generated: '2026-08-01'
+method: probed
+source: live probes of /.well-known/* and /llms.txt across every kafene.com host
+hosts:
+- host: https://www.kafene.com
+  kind: marketing site (Webflow)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /robots.txt
+    status: 200
+    note: served but zero-length body
+  - path: /sitemap.xml
+    status: 404
+- host: https://merchant.kafene.com
+  kind: merchant portal single-page app
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    valid: false
+    reason: SPA catch-all — body is the app HTML shell (text/html), not the document
+  - path: /.well-known/openid-configuration
+    status: 200
+    valid: false
+    reason: SPA catch-all — HTML shell
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    valid: false
+    reason: SPA catch-all — HTML shell
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    valid: false
+    reason: SPA catch-all — HTML shell
+  - path: /.well-known/api-catalog
+    status: 200
+    valid: false
+    reason: SPA catch-all — HTML shell
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    valid: false
+    reason: SPA catch-all — HTML shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    valid: false
+    reason: SPA catch-all — HTML shell, not an A2A AgentCard object
+  - path: /.well-known/agent.json
+    status: 200
+    valid: false
+    reason: SPA catch-all — HTML shell, not an A2A AgentCard object
+  - path: /llms.txt
+    status: 200
+    valid: false
+    reason: SPA catch-all — HTML shell
+- host: https://application.kafene.com
+  kind: consumer lease application / dashboard single-page app
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    valid: false
+    reason: SPA catch-all — HTML shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    valid: false
+    reason: SPA catch-all — HTML shell, not an A2A AgentCard object
+  - path: /.well-known/agent.json
+    status: 200
+    valid: false
+    reason: SPA catch-all — HTML shell, not an A2A AgentCard object
+  - path: /llms.txt
+    status: 200
+    valid: false
+    reason: SPA catch-all — HTML shell
+- host: https://api.kafene.com
+  kind: reserved API hostname, no live origin
+  documents:
+  - path: /.well-known/security.txt
+    status: 530
+  - path: /openapi.json
+    status: 530
+  - path: /swagger.json
+    status: 530
+  - path: /docs
+    status: 530
+notes: >-
+  No valid /.well-known discovery document is published on any Kafene host as of the
+  probe date. Every 200 observed on merchant.kafene.com and application.kafene.com is a
+  single-page-app catch-all returning the HTML shell for arbitrary paths — the dominant
+  false positive on this probe — and was rejected. api.kafene.com resolves to Cloudflare
+  but the edge returns "error code: 1016" (origin DNS error) for every path, so no
+  machine-readable contract could be retrieved there either. Recorded as honest negative
+  data; no WellKnown, SecurityTxt or AgentCard pointer emitted.

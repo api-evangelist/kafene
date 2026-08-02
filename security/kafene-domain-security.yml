@@ -1,0 +1,55 @@
+generated: '2026-08-01'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml hosts + discovered kafene.com subdomains
+hosts:
+- host: www.kafene.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 19 17:17:24 2026 GMT
+  hsts: true
+  hsts_max_age: 7776000
+- host: merchant.kafene.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 25 08:13:02 2026 GMT
+  hsts: true
+  hsts_max_age: 7776000
+  hsts_include_subdomains: true
+  note: merchant portal single-page app; returns 200 HTML for every path (SPA catch-all)
+- host: application.kafene.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 25 08:13:02 2026 GMT
+  hsts: true
+  hsts_max_age: 7776000
+  hsts_include_subdomains: true
+  note: consumer lease application / dashboard SPA; SPA catch-all on every path
+- host: app.kafene.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 25 08:13:02 2026 GMT
+  hsts: true
+  hsts_max_age: 7776000
+  hsts_include_subdomains: true
+- host: customer.kafene.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 25 08:13:02 2026 GMT
+  hsts: true
+  hsts_max_age: 7776000
+  hsts_include_subdomains: true
+- host: api.kafene.com
+  https: true
+  reachable: false
+  http_status: 530
+  note: >-
+    DNS resolves to Cloudflare but the edge returns "error code: 1016" (origin DNS
+    error) for every path probed (/, /openapi.json, /swagger.json, /docs, /health).
+    No origin is currently serving this hostname.
+domains:
+- domain: kafene.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

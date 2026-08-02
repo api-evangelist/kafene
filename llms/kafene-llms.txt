@@ -1,0 +1,69 @@
+# Kafene
+
+> Kafene is a New York-based point-of-sale financing platform offering transparent
+> lease-to-own (LTO) purchase options to prime and non-prime consumers at retail
+> checkout. Founded in 2019, it underwrites shoppers with an AI-driven risk model
+> drawing on 20,000+ data points, returning approvals up to $5,000 in seconds, then
+> pays the merchant directly on delivery confirmation while the consumer pays weekly
+> or biweekly until ownership.
+
+Kafene publishes **no public developer program**. As of 2026-08-01 there is no
+OpenAPI, GraphQL, AsyncAPI or MCP contract, no SDKs or client libraries in any public
+package registry, no GitHub organization, and no `/.well-known/` discovery surface on
+any kafene.com host. Merchant integration (in-store POS origination and text-to-apply)
+is arranged directly with Kafene's partner team, and Kafene also reaches merchants
+through financing-waterfall networks such as Versatile Credit and LendPro. The
+`api.kafene.com` hostname resolves to Cloudflare but has no live origin (HTTP 530,
+error 1016). Do not assume an API exists; contact Kafene to arrange an integration.
+
+## Company
+
+- [Kafene](https://www.kafene.com): Marketing site — lease-to-own point-of-sale financing.
+- [About Kafene](https://www.kafene.com/about-kafene): Founding story, founders Neal Desai and James Schuler, mission.
+- [Newsroom](https://www.kafene.com/newsroom): Press releases and company announcements.
+- [Careers](https://www.kafene.com/careers): Open roles.
+
+## Merchants
+
+- [How it works — Merchants](https://www.kafene.com/merchants): POS origination, text-to-apply, approval, merchant funding on delivery.
+- [Become a Kafene Partner](https://www.kafene.com/become-a-kafene-partner): Merchant onboarding request form.
+- [Merchant Login](https://merchant.kafene.com/login): Authenticated merchant portal (single-page app).
+- Merchant support: 855.206.4040, Mon-Fri 9am-10pm ET, Sat 10am-8pm ET, Sun 10am-7pm ET.
+
+## Customers
+
+- [How it works — Customers](https://www.kafene.com/customers): Lease terms, payment cadence, early purchase options.
+- [Store Locator](https://www.kafene.com/store-locator): Find participating retailers.
+- [Customer Dashboard](https://application.kafene.com/): Authenticated lease and payment dashboard (single-page app).
+- Customer support: 855.420.0747, Mon-Fri 8am-10pm ET, Sat/Sun 10am-7pm ET.
+- Automated payments phone system: 855-420-0747.
+
+## Policies
+
+- [FAQ](https://www.kafene.com/faq): Merchant and consumer questions, eligibility, lease amounts, payments.
+- [Terms and Conditions](https://www.kafene.com/legal/terms-conditions)
+- [Privacy Policy](https://www.kafene.com/legal/privacy-policy)
+- [Consumer Commitments](https://www.kafene.com/legal/consumer-commitments)
+- [Cookie Policy](https://www.kafene.com/legal/cookie-policy)
+- [SMS Policies](https://www.kafene.com/legal/sms-policies)
+
+## API Evangelist artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/kafene/refs/heads/main/apis.yml): APIs.json 0.20 index for Kafene.
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/kafene/refs/heads/main/security/kafene-domain-security.yml): Probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture.
+- [Well-known probe](https://raw.githubusercontent.com/api-evangelist/kafene/refs/heads/main/well-known/kafene-well-known.yml): Recorded negative result for every discovery path.
+
+## Optional
+
+- [Kafene on LinkedIn](https://www.linkedin.com/company/kafene)
+
+## Not Kafene
+
+- `kafenelease.com` — an independent affiliate review site that self-declares
+  "Not affiliated with Kafene Inc." Do not treat it as a Kafene property.
+
+<!--
+generated: '2026-08-01'
+method: generated
+source: apis.yml + verified live pages on www.kafene.com (all probed HTTP 200)
+-->
