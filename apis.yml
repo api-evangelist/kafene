@@ -38,6 +38,16 @@ accessModel:
   method: searched
 tags:
 - Company
+- Financial-Services
+- Fintech
+- Lease-to-Own
+- Point-of-Sale
+- Consumer Finance
+- Retail
+- Underwriting
+- Payments
+tags_raw:
+- Company
 - Financial Services
 - Fintech
 - Lease To Own
