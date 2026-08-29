@@ -1,5 +1,16 @@
 aid: kafene
 name: Kafene
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/66c3383e064576f49e765ed2/6a0d813b7a26a50ddb512855_kafene-logo-horiz-color.svg
 description: >-
   Kafene is a New York-based point-of-sale financing platform that lets retailers offer
