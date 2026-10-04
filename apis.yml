@@ -49,7 +49,7 @@ accessModel:
   method: searched
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Lease-to-Own
 - Point-of-Sale
@@ -67,6 +67,7 @@ tags_raw:
 - Retail
 - Underwriting
 - Payments
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
