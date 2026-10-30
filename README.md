@@ -64,35 +64,92 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Kafene is a New York-based point-of-sale financing platform that lets retailers offer
-transparent lease-to-own (LTO) purchase options to prime and non-prime consumers.
-Founded in 2019 by Neal Desai and James Schuler, it underwrites shoppers with an
-AI-driven risk model drawing on 20,000+ data points, returning approvals up to $5,000
-in seconds, then pays the merchant directly on delivery confirmation while the customer
-pays weekly or biweekly until ownership.
+Kafene is a New York-based point-of-sale financing platform that lets retailers offer transparent lease-to-own (LTO) purchase options to prime and non-prime consumers. Founded in 2019 by Neal Desai and James Schuler, the company underwrites shoppers with an AI-driven risk model that pulls 20,000+ data points to return an approval — up to $5,000 — in seconds, then pays the merchant directly on delivery confirmation while the customer pays weekly or biweekly until ownership. Merchants originate applications from their in-store POS or by sending a text-to-apply link; consumers manage leases and payments in a self-service dashboard. Kafene raised a ~$31M Series B and reaches merchants through financing-waterfall networks such as Versatile Credit and LendPro. As of the 2026-08-01 enrichment probe Kafene publishes no public developer program, no OpenAPI/GraphQL/MCP contract, no SDKs, and no /.well-known discovery surface; its merchant and consumer surfaces are authenticated single-page web applications and integration is arranged through Kafene's partner team, not self-serve documentation.
 
-- Website: https://www.kafene.com
-- Merchants: https://www.kafene.com/merchants
-- Become a partner: https://www.kafene.com/become-a-kafene-partner
-- Merchant portal: https://merchant.kafene.com/login
-- Customer dashboard: https://application.kafene.com/
+**Areas:** Company · Financial Services · Fintech · Lease-to-Own · Point-of-Sale · Consumer Finance · Retail · Underwriting · Payments
 
-## API surface
+## Kafene on APIs.io
 
-As of the 2026-08-01 enrichment pass, **Kafene publishes no public API**:
+Everything profiled for Kafene is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/kafene/](https://apis.io/providers/kafene/)** — or go straight to one of the APIs or properties below.
 
-- No developer portal, API reference, or documentation site
-  (`developer.kafene.com` and `docs.kafene.com` do not resolve).
-- No OpenAPI/Swagger, GraphQL, AsyncAPI or MCP contract found on any host.
-- `api.kafene.com` resolves to Cloudflare but has **no live origin** — every path
-  returns HTTP 530 / `error code: 1016`.
-- No `/.well-known/` discovery documents; the 200s returned by the merchant and
-  application single-page apps are HTML catch-alls, not real documents.
-- No first-party SDKs in npm, PyPI, RubyGems or Packagist; no GitHub organization.
+### Published properties
 
-Merchant integration is arranged directly with Kafene's partner team (in-store POS
-origination and text-to-apply), and Kafene is also distributed through
-financing-waterfall networks such as Versatile Credit and LendPro.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-See `well-known/kafene-well-known.yml` for the recorded probe matrix and
-`security/kafene-domain-security.yml` for the probed TLS/DNS posture.
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Moved to /providers/kafene/](https://apis.io/servers/kafene/kafene/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Kafene Domain Security](https://apis.io/security/kafene/kafene-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.kafene.com)
+- [Sign up](https://www.kafene.com/become-a-kafene-partner)
+- [Support](https://www.kafene.com/contact)
+- [Blog](https://www.kafene.com/newsroom)
+- [Terms of service](https://www.kafene.com/legal/terms-conditions)
+- [Privacy policy](https://www.kafene.com/legal/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 13.6** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 60.0 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 34.2 |
+
+**Agent readiness 12.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 12.3** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/kafene/](https://apis.io/providers/kafene/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Kafene: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/kafene/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
